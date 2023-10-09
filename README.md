@@ -189,7 +189,7 @@ The @DeleteMapping annotation is used for the delete/student/by/{Id} or delete/l
     }
 ```
 
-The controller class also has an autowired instance of the StudentService, LaptopService, CourseService, BookService and AddressService interface to handle business logic for the Employee Address.
+The controller class also has an autowired instance of the StudentService, LaptopService, CourseService, BookService and AddressService interface to handle business logic for the Student App.
 
 This implementation demonstrates a basic setup for a REST API controller in Spring Boot, but it can be expanded upon and customized based on specific requirements for the Student App.
 
