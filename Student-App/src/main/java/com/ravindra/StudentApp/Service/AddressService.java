@@ -18,6 +18,9 @@ public class AddressService {
     @Autowired
     IStudentRepo studentRepo;
 
+    @Autowired
+    StudentService studentService;
+
     public String AddAddress(Address address) {
         addressRepo.save(address);
         return "Address added";
@@ -48,7 +51,8 @@ public class AddressService {
         Student student = studentRepo.findByaddress(address);
         if(student!=null)
         {
-            studentRepo.delete(student);
+            long Id = student.getStudentId();
+            studentService.DeleteStudentById(Id);
         }
         addressRepo.deleteById(id);
         return "Address deleted";
