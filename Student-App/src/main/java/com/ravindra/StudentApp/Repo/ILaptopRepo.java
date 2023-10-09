@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ILaptopRepo extends CrudRepository<Laptop, Long> {
-    Laptop findByStudent(Student student);
+    Laptop findBystudent(Student student);
 }

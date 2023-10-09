@@ -54,20 +54,20 @@ public class StudentService {
     public String DeleteStudentById(long id) {
         Student student = studentRepo.findById(id).orElseThrow();
 
-        List<Course> courses = courseRepo.findByStudent(student);
+        List<Course> courses = courseRepo.findBystudent(student);
         if(!courses.isEmpty()) {
             for (Course cou : courses) {
                 courseRepo.delete(cou);
             }
         }
 
-        Laptop laptop = laptopRepo.findByStudent(student);
+        Laptop laptop = laptopRepo.findBystudent(student);
         if(laptop!=null)
         {
             laptopRepo.delete(laptop);
         }
 
-        List<Book> books = bookRepo.findByStudent(student);
+        List<Book> books = bookRepo.findBystudent(student);
         if(!books.isEmpty()){
             for(Book b : books)
             {

@@ -9,5 +9,5 @@ import java.util.List;
 
 @Repository
 public interface IBookRepo extends CrudRepository<Book, Long> {
-    List<Book> findByStudent(Student student);
+    List<Book> findBystudent(Student student);
 }

@@ -13,12 +13,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,scope=Student.class,property="StudentId")
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,scope=Student.class,property="studentId")
 public class Student {
 
     @Id
-    private long StudentId;
-    private String StudentName;
+    private long studentId;
+    private String studentName;
     private int studentAge;
     private String studentPhoneNumber;
     private String studentBranch;
